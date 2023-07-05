@@ -8,12 +8,12 @@ My name is Yuki, and I am an independent blockchain security researcher.
 
 | Overall issues found | High risk | Unique highs | Medium risk | Unique mediums | Audited contests |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 14 issues found | 8 highs | - | 6 mediums | - | 3 contests |
+| 15 issues found | 9 highs | - | 6 mediums | - | 3 contests |
 
 ## Sherlock  <img src="https://audits.sherlock.xyz/_next/static/media/sherlock_logo.dc2b3290.svg" width=22 height=22>
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Symmetrical](https://audits.sherlock.xyz/contests/85)| 4 highs | 3 mediums | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/symmetrical.md) | - | - | Solidity |
 | [Unstoppable](https://audits.sherlock.xyz/contests/95) | 3 highs | 2 mediums | - | - | - | Vyper |
-| [Bond Options](https://audits.sherlock.xyz/contests/99) | 1 high | 1 medium | - | - | - | Solidity |
+| [Bond Options](https://audits.sherlock.xyz/contests/99) | 2 high | 1 medium | - | - | - | Solidity |
 | [GFX Labs](https://audits.sherlock.xyz/contests/97) | - | - | - | - | - | Solidity |
