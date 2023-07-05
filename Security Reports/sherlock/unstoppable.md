@@ -130,7 +130,7 @@ The issue leads to liquidity providers unable to withdraw their full amount of f
 
 ## Code Snippet
 
-https://github.com/sherlock-audit/2023-06-unstoppable-SilentYuki/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L233
+https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L233
 
 ## Tool used
 
@@ -324,13 +324,13 @@ Duo to the wrong logic applied, this issue leads to permanent loss of funds as t
 
 ## Code Snippet
 
-https://github.com/sherlock-audit/2023-06-unstoppable-SilentYuki/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L233
+https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L233
 
-https://github.com/sherlock-audit/2023-06-unstoppable-SilentYuki/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L290
+https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L290
 
-https://github.com/sherlock-audit/2023-06-unstoppable-SilentYuki/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L503
+https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L503
 
-https://github.com/sherlock-audit/2023-06-unstoppable-SilentYuki/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L528
+https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L528
 
 ## Tool used
 
@@ -407,7 +407,7 @@ By not checking if the position is still liquidatable even after adding margin t
 
 ## Code Snippet
 
-https://github.com/sherlock-audit/2023-06-unstoppable-SilentYuki/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L503
+https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L503
 
 ## Tool used
 
@@ -524,9 +524,9 @@ The owner of a position exceeding the maximum allowed leverage can bypass the li
 
 ## Code Snippet
 
-https://github.com/sherlock-audit/2023-06-unstoppable-SilentYuki/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L233
+https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L233
 
-https://github.com/sherlock-audit/2023-06-unstoppable-SilentYuki/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L346
+https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L346
 
 ## Tool used
 
@@ -612,7 +612,7 @@ Duo to the logic error, the minimum amount calculated by the function will be in
 
 ## Code Snippet
 
-https://github.com/sherlock-audit/2023-06-unstoppable-SilentYuki/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L290
+https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy#L290
 
 ## Tool used
 
