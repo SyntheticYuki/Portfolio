@@ -4,7 +4,7 @@
 
 | Protocol | Website | Twitter | Contest Pot | nSLOC | Length | Start | End |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| Symmetrical | [Website](https://www.symm.io) | [Twitter](https://twitter.com/symm_io) | 61,000 USDC | 3121 | 18 days | June 15, 2023 6:00 PM | July 3, 2023 6:00 PM |
+| Symmetrical | [Website](https://www.symm.io) | [Twitter](https://twitter.com/symm_io) | 61,000 USDC | 3121 | 18 days | June 15, 2023 | July 3, 2023 |
 
 
 ## What is SYMMIO?
