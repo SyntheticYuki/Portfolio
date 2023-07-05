@@ -1,6 +1,6 @@
 ![](https://audits.sherlock.xyz/_next/image?url=https%3A%2F%2Fsherlock-files.ams3.digitaloceanspaces.com%2Fcontests%2F512_black.png&w=256&q=75)
 
-# [Symmetrical](https://www.symm.io/)
+# [Symmetrical](https://audits.sherlock.xyz/contests/85)
 
 | Protocol | Website | Twitter | Contest Pot | nSLOC | Length | Start | End |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
