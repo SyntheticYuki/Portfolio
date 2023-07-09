@@ -27,3 +27,8 @@ My name is Yuki, and I am an independent blockchain security researcher.
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [PoolTogether](https://code4rena.com/contests/2023-07-pooltogether#top) | - | - | - | - | - | Solidity |
 | [Alexar Network](https://code4rena.com/contests/2023-07-axelar-network#top) | - | - | - | - | - | Solidity |
+
+# Immunefi <img src="https://immunefi.com/images/logo-white.svg" width=100 height=25>
+| Project | Severity | Security Report | Status |
+|:--:|:--:|:--:|:--:|
+| - | - | - | - |
