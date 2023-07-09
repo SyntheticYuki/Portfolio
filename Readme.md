@@ -17,7 +17,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Symmetrical](https://audits.sherlock.xyz/contests/85)| 4 highs | 3 mediums | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/symmetrical.md) | - | - | Solidity |
 | [Unstoppable](https://audits.sherlock.xyz/contests/95) | 3 highs | 2 mediums | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/unstoppable.md) | - | - | Vyper |
-| [Bond Options](https://audits.sherlock.xyz/contests/99) | 2 highs | 1 medium | - | - | - | Solidity |
+| [Bond Options](https://audits.sherlock.xyz/contests/99) | 2 highs | 1 medium | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/BondOptions.md) | - | - | Solidity |
 | [GLIF](https://audits.sherlock.xyz/contests/90) | - | - | Private | - | - | Solidity |
 | [TokenSoft](https://audits.sherlock.xyz/contests/100) | - | - | - | - | - | Solidity |
 | [Index-Update](https://audits.sherlock.xyz/contests/91) | - | - | - | - | - | Solidity |
