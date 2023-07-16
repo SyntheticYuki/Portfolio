@@ -10,7 +10,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 
 | Overall issues found | High risk | Unique highs | Medium risk | Unique mediums | Audited contests |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 21 issues found | 12 highs | - | 9 mediums | - | 5 contests |
+| 20 issues found | 12 highs | - | 8 mediums | - | 5 contests |
 
 # Sherlock  <img src="https://audits.sherlock.xyz/_next/static/media/sherlock_logo.dc2b3290.svg" width=22 height=22>
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
