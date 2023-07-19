@@ -26,12 +26,16 @@ My name is Yuki, and I am an independent blockchain security researcher.
 # Code4rena <img src="https://code4rena.com/logos/c4-logo.svg" width=100 height=25>
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| - | - | - | - | - | - | - |
+| [Arcade](https://code4rena.com/contests/2023-07-arcadexyz#top) | - | - | - | - | - | Solidity |
+| [Amphora](https://code4rena.com/contests/2023-07-amphora-protocol#top) | - | - | - | - | - | Solidity |
+| [Moonwell](https://code4rena.com/contests/2023-07-moonwell#top) | - | - | - | - | - | Solidity |
+
 
 # CodeHawks <img src="https://res.cloudinary.com/droqoz7lg/image/upload/v1689080263/snhkgvtsidryjdtx0pce.png" width=50 height=27>
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| - | - | - | - | - | - | - |
+| [Stablecoin](https://www.codehawks.com/contests/cljx3b9390009liqwuedkn0m0) | - | - | - | - | - | Solidity |
+| [Escrow](https://www.codehawks.com/contests/cljyfxlc40003jq082s0wemya) | - | - | - | - | - | Solidity |
 
 # Immunefi <img src="https://immunefi.com/images/logo-white.svg" width=100 height=25>
 | Project | Severity | Security Report | Payout | Status |
