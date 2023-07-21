@@ -10,7 +10,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 
 | Overall issues found | High risk | Unique highs | Medium risk | Unique mediums | Audited contests |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 26 issues found | 17 highs | - | 9 mediums | - | 6 contests |
+| 25 issues found | 17 highs | - | 8 mediums | - | 6 contests |
 
 # Sherlock  <img src="https://audits.sherlock.xyz/_next/static/media/sherlock_logo.dc2b3290.svg" width=22 height=22>
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
@@ -20,7 +20,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 | [Bond Options](https://audits.sherlock.xyz/contests/99) | 2 highs | 1 medium | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/BondOptions.md) | - | - | Solidity |
 | [GLIF](https://audits.sherlock.xyz/contests/90) | 3 highs | 1 medium | Private | - | - | Solidity |
 | [Index-Update](https://audits.sherlock.xyz/contests/91) | 1 high | 0 medium | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/Index-update.md) | - | - | Solidity |
-| [TokenSoft](https://audits.sherlock.xyz/contests/100) | 5 highs | 1 medium | - | - | - | Solidity |
+| [TokenSoft](https://audits.sherlock.xyz/contests/100) | 5 highs | 0 medium | - | - | - | Solidity |
 | [Perennial V2](https://audits.sherlock.xyz/contests/106) | - | - | - | - | - | Solidity |
 | [Tokemak](https://audits.sherlock.xyz/contests/101) | - | - | - | - | - | Solidity |
 
