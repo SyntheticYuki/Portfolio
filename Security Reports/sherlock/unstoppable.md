@@ -29,7 +29,7 @@ When opening a trade instead of competing against LPs (like GMX) you are simply 
 This design removes the need to keep Open Interest balanced like on other platforms, meaning there are no Open Interest caps or position size limits for our traders. 
 
 ## Audit scope
-- [unstoppable-dex-audit/contracts/margin-dex](https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/MarginDex.vy)
+- [unstoppable-dex-audit/contracts/margin-dex.vy](https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/MarginDex.vy)
 - [unstoppable-dex-audit/contracts/margin-dex/SwapRouter.vy](https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/SwapRouter.vy)
 - [unstoppable-dex-audit/contracts/margin-dex/Vault.vy](https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/margin-dex/Vault.vy)
 - [unstoppable-dex-audit/contracts/spot-dex/Dca.vy](https://github.com/sherlock-audit/2023-06-unstoppable/blob/main/unstoppable-dex-audit/contracts/spot-dex/Dca.vy)
