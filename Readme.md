@@ -12,6 +12,12 @@ My name is Yuki, and I am an independent blockchain security researcher.
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | 25 issues found | 17 highs | - | 8 mediums | - | 6 contests |
 
+# Yuki's monthly tracking 
+### 22 June, 2023 - 22 July, 2023 
+| Total issues | High risk | Medium risk | Audited contests | Security reports | Earned payouts |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+| 25 issues found | 17 highs | 8 mediums | 6 contests | [Source](https://github.com/SilentYuki/Monthly-reports/tree/main/22%20June,%202023%20-%2022%20July,%202023) | - |
+
 # Sherlock  <img src="https://audits.sherlock.xyz/_next/static/media/sherlock_logo.dc2b3290.svg" width=22 height=22>
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
