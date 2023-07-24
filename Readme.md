@@ -19,6 +19,8 @@ My name is Yuki, and I am an independent blockchain security researcher.
 | 25 issues found | 17 highs | 8 mediums | 6 contests | [Source](https://github.com/SilentYuki/Monthly-reports/tree/main/22%20June,%202023%20-%2022%20July,%202023) | - |
 
 # Sherlock  <img src="https://audits.sherlock.xyz/_next/static/media/sherlock_logo.dc2b3290.svg" width=22 height=22>
+
+### Audit Competitions
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Symmetrical](https://audits.sherlock.xyz/contests/85)| 4 highs | 3 mediums | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/symmetrical.md) | - | - | Solidity |
@@ -31,21 +33,38 @@ My name is Yuki, and I am an independent blockchain security researcher.
 | [Tokemak](https://audits.sherlock.xyz/contests/101) | - | - | - | - | - | Solidity |
 
 # Code4rena <img src="https://code4rena.com/logos/c4-logo.svg" width=100 height=25>
+
+### Audit Competitions
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Arcade](https://code4rena.com/contests/2023-07-arcadexyz#top) | - | - | - | - | - | Solidity |
 | [Amphora](https://code4rena.com/contests/2023-07-amphora-protocol#top) | - | - | - | - | - | Solidity |
 | [Moonwell](https://code4rena.com/contests/2023-07-moonwell#top) | - | - | - | - | - | Solidity |
 
-
 # CodeHawks <img src="https://res.cloudinary.com/droqoz7lg/image/upload/v1689080263/snhkgvtsidryjdtx0pce.png" width=50 height=27>
+
+### Audit Competitions
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Stablecoin](https://www.codehawks.com/contests/cljx3b9390009liqwuedkn0m0) | - | - | - | - | - | Solidity |
 | [Escrow](https://www.codehawks.com/contests/cljyfxlc40003jq082s0wemya) | - | - | - | - | - | Solidity |
 | [Beedle](https://www.codehawks.com/contests/clkbo1fa20009jr08nyyf9wbx) | - | - | - | - | - | Solidity |
 
+# Hats Finance <img src="https://pbs.twimg.com/profile_images/1541463778113466368/VAupIuYf_400x400.png" width=35 height=28>
+
+### Audit Competitions
+| Contest | High risk | Medium risk | Security report | Payout |
+|:--:|:--:|:--:|:--:|:--:|
+| [VMEX](https://app.hats.finance/audit-competitions/vmex-0xb6861bdeb368a1bf628fc36a36cec62d04fb6a77/rewards) | - | - | - | - |
+
+### Bug bounties
+| Project | Severity | Security Report | Payout | Status |
+|:--:|:--:|:--:|:--:|:--:|
+| - | - | - | - | - |
+
 # Immunefi <img src="https://immunefi.com/images/logo-white.svg" width=100 height=25>
+
+### Bug bounties
 | Project | Severity | Security Report | Payout | Status |
 |:--:|:--:|:--:|:--:|:--:|
 | - | - | - | - | - |
