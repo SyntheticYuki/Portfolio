@@ -37,9 +37,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 ### Audit Competitions
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| [Arcade](https://code4rena.com/contests/2023-07-arcadexyz#top) | - | - | - | - | - | Solidity |
-| [Amphora](https://code4rena.com/contests/2023-07-amphora-protocol#top) | - | - | - | - | - | Solidity |
-| [Moonwell](https://code4rena.com/contests/2023-07-moonwell#top) | - | - | - | - | - | Solidity |
+| [Chainlink Staking](https://code4rena.com/contests/2023-08-chainlink-staking-v02#top) | - | - | - | - | - | Solidity |
 
 # CodeHawks <img src="https://res.cloudinary.com/droqoz7lg/image/upload/v1689080263/snhkgvtsidryjdtx0pce.png" width=50 height=27>
 
@@ -49,18 +47,6 @@ My name is Yuki, and I am an independent blockchain security researcher.
 | [Stablecoin](https://www.codehawks.com/contests/cljx3b9390009liqwuedkn0m0) | - | - | - | - | - | Solidity |
 | [Escrow](https://www.codehawks.com/contests/cljyfxlc40003jq082s0wemya) | - | - | - | - | - | Solidity |
 | [Beedle](https://www.codehawks.com/contests/clkbo1fa20009jr08nyyf9wbx) | - | - | - | - | - | Solidity |
-
-# Hats Finance <img src="https://pbs.twimg.com/profile_images/1541463778113466368/VAupIuYf_400x400.png" width=35 height=28>
-
-### Audit Competitions
-| Contest | High risk | Medium risk | Security report | Payout |
-|:--:|:--:|:--:|:--:|:--:|
-| [VMEX](https://app.hats.finance/audit-competitions/vmex-0xb6861bdeb368a1bf628fc36a36cec62d04fb6a77/rewards) | - | - | - | - |
-
-### Bug bounties
-| Project | Severity | Security Report | Payout | Status |
-|:--:|:--:|:--:|:--:|:--:|
-| - | - | - | - | - |
 
 # Immunefi <img src="https://immunefi.com/images/logo-white.svg" width=100 height=25>
 
