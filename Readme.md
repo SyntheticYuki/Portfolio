@@ -18,7 +18,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | 27 issues found | 19 highs | 8 mediums | 7 contests | [Source](https://github.com/SilentYuki/Monthly-reports/tree/main/22%20June,%202023%20-%2022%20July,%202023) | - |
 
-### 27 July, 2023 - 22 August, 2023 
+### 27 July, 2023 - 27 August, 2023 
 | Total issues | High risk | Medium risk | Audited contests | Security reports | Earned payouts |
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | 2 issues found | 2 highs | 0 mediums | 1 contest | - | - | - |
