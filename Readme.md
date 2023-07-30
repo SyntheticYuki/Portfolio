@@ -21,7 +21,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 ### 27 July, 2023 - 27 August, 2023 
 | Total issues | High risk | Medium risk | Audited contests | Security reports | Earned payouts |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 2 issues found | 2 highs | 0 mediums | 1 contest | - | - | - |
+| 2 issues found | 1 high | 1 mediums | 1 contest | - | - | - |
 
 # Sherlock  <img src="https://audits.sherlock.xyz/_next/static/media/sherlock_logo.dc2b3290.svg" width=22 height=22>
 
