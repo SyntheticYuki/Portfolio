@@ -10,7 +10,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 
 | Overall issues found | High risk | Unique highs | Medium risk | Unique mediums | Audited contests |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 27 issues found | 18 highs | - | 9 mediums | - | 7 contests |
+| 35 issues found | 22 highs | - | 13 mediums | - | 8 contests |
 
 # Yuki's monthly tracking 
 ### 22 June, 2023 - 22 July, 2023 
@@ -21,7 +21,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 ### 27 July, 2023 - 27 August, 2023 
 | Total issues | High risk | Medium risk | Audited contests | Security reports | Earned payouts |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 2 issues found | 1 high | 1 mediums | 1 contest | - | - | - |
+| 10 issues found | 5 highs | 5 mediums | 2 contests | - | - | - |
 
 # Sherlock  <img src="https://audits.sherlock.xyz/_next/static/media/sherlock_logo.dc2b3290.svg" width=22 height=22>
 
@@ -53,7 +53,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Stablecoin](https://www.codehawks.com/contests/cljx3b9390009liqwuedkn0m0) | - | - | - | - | - | Solidity |
 | [Escrow](https://www.codehawks.com/contests/cljyfxlc40003jq082s0wemya) | 1 high | 1 medium | - | - | - | Solidity |
-| [Beedle](https://www.codehawks.com/contests/clkbo1fa20009jr08nyyf9wbx) | - | - | - | - | - | Solidity |
+| [Beedle](https://www.codehawks.com/contests/clkbo1fa20009jr08nyyf9wbx) | 4 highs | 4 mediums | - | - | - | Solidity |
 
 # Immunefi <img src="https://immunefi.com/images/logo-white.svg" width=100 height=25>
 
