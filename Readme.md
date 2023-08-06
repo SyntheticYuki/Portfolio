@@ -10,13 +10,13 @@ My name is Yuki, and I am an independent blockchain security researcher.
 
 | Overall issues found | High risk | Unique highs | Medium risk | Unique mediums | Audited contests |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 35 issues found | 22 highs | - | 13 mediums | - | 8 contests |
+| 35 issues found | 20 highs | - | 15 mediums | - | 9 contests |
 
 # Yuki's monthly tracking 
 ### 22 June, 2023 - 22 July, 2023 
 | Total issues | High risk | Medium risk | Audited contests | Security reports | Earned payouts |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 27 issues found | 19 highs | 8 mediums | 7 contests | [Source](https://github.com/SilentYuki/Monthly-reports/tree/main/22%20June,%202023%20-%2022%20July,%202023) | - |
+| 27 issues found | 17 highs | 8 mediums | 6 contests | [Source](https://github.com/SilentYuki/Monthly-reports/tree/main/22%20June,%202023%20-%2022%20July,%202023) | - |
 
 ### 27 July, 2023 - 27 August, 2023 
 | Total issues | High risk | Medium risk | Audited contests | Security reports | Earned payouts |
