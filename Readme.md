@@ -21,7 +21,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 ### 27 July, 2023 - 27 August, 2023 
 | Total issues | High risk | Medium risk | Audited contests | Security reports | Earned payouts |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 10 issues found | 5 highs | 5 mediums | 2 contests | - | - | - |
+| 18 issues found | 7 highs | 11 mediums | 3 contests | - | - | - |
 
 # Sherlock  <img src="https://audits.sherlock.xyz/_next/static/media/sherlock_logo.dc2b3290.svg" width=22 height=22>
 
@@ -41,7 +41,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 ### Audit Competitions
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| [Tangible](https://code4rena.com/contests/2023-08-tangible#top) | - | - | - | - | - | Solidity |
+| [Tangible](https://code4rena.com/contests/2023-08-tangible#top) | 2 highs | 6 mediums | Private | - | - | Solidity |
 | [PoolTogether V5](https://code4rena.com/contests/2023-08-pooltogether-v5-part-deux#top) | - | - | - | - | - | Solidity |
 | [Good Entry](https://code4rena.com/contests/2023-08-good-entry#top) | - | - | - | - | - | Solidity |
 | [Chainlink Staking](https://code4rena.com/contests/2023-08-chainlink-staking-v02#top) | - | - | - | - | - | Solidity |
