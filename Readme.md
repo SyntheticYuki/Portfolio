@@ -29,7 +29,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Symmetrical](https://audits.sherlock.xyz/contests/85)| 4 highs | 3 mediums | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/symmetrical.md) | - | - | Solidity |
-| [Unstoppable](https://audits.sherlock.xyz/contests/95) | 3 highs | 2 mediums | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/unstoppable.md) | - | - | Vyper |
+| [Unstoppable](https://audits.sherlock.xyz/contests/95) | 3 highs | 2 mediums | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/unstoppable.md) | 2nd | $3,842.94 USDC  | Vyper |
 | [Bond Options](https://audits.sherlock.xyz/contests/99) | 2 highs | 1 medium | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/BondOptions.md) | - | - | Solidity |
 | [GLIF](https://audits.sherlock.xyz/contests/90) | 3 highs | 1 medium | Private | - | - | Solidity |
 | [Index-Update](https://audits.sherlock.xyz/contests/91) | 1 high | 0 medium | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/sherlock/Index-update.md) | - | - | Solidity |
