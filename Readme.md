@@ -10,7 +10,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 
 | Overall issues found | High risk | Unique highs | Medium risk | Unique mediums | Audited contests |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 35 issues found | 20 highs | - | 15 mediums | - | 8 contests |
+| 37 issues found | 22 highs | - | 15 mediums | - | 9 contests |
 
 # Yuki's monthly tracking 
 ### 22 June, 2023 - 22 July, 2023 
@@ -21,7 +21,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 ### 27 July, 2023 - 27 August, 2023 
 | Total issues | High risk | Medium risk | Audited contests | Security reports | Earned payouts |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 10 issues found | 3 highs | 7 mediums | 2 contests | - | - | - |
+| 12 issues found | 5 highs | 7 mediums | 3 contests | - | - | - |
 
 # Sherlock  <img src="https://audits.sherlock.xyz/_next/static/media/sherlock_logo.dc2b3290.svg" width=22 height=22>
 
@@ -41,6 +41,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Tangible](https://code4rena.com/contests/2023-08-tangible#top) | 2 highs | 6 mediums | Private | - | - | Solidity |
+| [veRWA](https://code4rena.com/contests/2023-08-verwa#top) | 2 highs | 0 medium | Private | - | - | Solidity |
 
 # CodeHawks <img src="https://res.cloudinary.com/droqoz7lg/image/upload/v1689080263/snhkgvtsidryjdtx0pce.png" width=50 height=27>
 
