@@ -28,13 +28,14 @@ My name is Yuki, and I am an independent blockchain security researcher.
 ### Audit Competitions
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| [Tangible](https://code4rena.com/contests/2023-08-tangible#top) | 2 highs | 6 mediums | Private | - | - | Solidity |
+| [Tangible](https://code4rena.com/contests/2023-08-tangible#top) | 2 highs | 6 mediums | Private | 15th | $1,104.36 USDC | Solidity |
 
 # CodeHawks <img src="https://res.cloudinary.com/droqoz7lg/image/upload/v1689080263/snhkgvtsidryjdtx0pce.png" width=50 height=27>
 
 ### Audit Competitions
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| - | - | - | - | - | - | - |
 
 # Immunefi <img src="https://immunefi.com/images/logo-white.svg" width=100 height=25>
 
