@@ -28,7 +28,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 ### Audit Competitions
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| [Tangible](https://code4rena.com/contests/2023-08-tangible#top) | 2 highs | 6 mediums | Private | 15th | $1,104.36 USDC | Solidity |
+| [Tangible](https://code4rena.com/contests/2023-08-tangible#top) | 2 highs | 6 mediums | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/code4rena/Tangible.md) | 15th | $1,104.36 USDC | Solidity |
 
 # CodeHawks <img src="https://res.cloudinary.com/droqoz7lg/image/upload/v1689080263/snhkgvtsidryjdtx0pce.png" width=50 height=27>
 
