@@ -32,15 +32,13 @@ With its unique features and capabilities, SYMM IO is poised to become the go-to
 
 | Severity | Title | Count |
 |:--|:--|:--:|
-| High | Wrong accounting happens when opening a partially filled position, which leads to permanent loss of funds. | 1 |
-| High | Malicious Party B is able to permanently prevent force closing a position by partially closing dust amounts. | 2 |
-| High | Expired signature can stuck all Party positions in a liquidation state. | 3 |
-| High | Loss of funds duo to wrong accounting of decimals when changing collateral. | 4 |
-| Medium | Malicious Party A can prevent Party B from emergency closing a position on a market price. | 5 |
-| Medium | Malicious liquidator can get the liquidation fee without finalizing the full liquidation of Party A. | 6 |
-| Medium | Force closing a position won't work when the order type is MARKET. | 7 |
+| High | Wrong accounting happens when opening a partially filled position, which leads to permanent loss of funds. | H-01 |
+| Medium | Malicious Party B is able to permanently prevent force closing a position by partially closing dust amounts. | M-01 |
+| Medium | Expired signature can stuck all Party positions in a liquidation state. | M-02 |
+| Medium | Malicious Party A can prevent Party B from emergency closing a position on a market price. | M-03 |
+| Medium | Malicious liquidator can get the liquidation fee without finalizing the full liquidation of Party A. | M-04 |
 
-# 1. Wrong accounting happens when opening a partially filled position, which leads to permanent loss of funds.
+# H-01. Wrong accounting happens when opening a partially filled position, which leads to permanent loss of funds.
 
 ## Summary
 Wrong accounting happens when opening a partially filled position, which leads to permanent loss of funds.
@@ -199,7 +197,7 @@ When creating a new pending Quote, the whole old quote values should be subtract
             }
 ```
 
-# 2. Malicious Party B is able to permanently prevent force closing a position by partially closing dust amounts.
+# M-01. Malicious Party B is able to permanently prevent force closing a position by partially closing dust amounts.
 
 ## Summary
 Malicious Party B is able to prevent force closing a position by partially closing dust amounts.
@@ -375,7 +373,7 @@ A mofifyTimestamp of a quote should be updated only when the quantityToClose equ
         }
     }
 ```
-# 3. Expired signature can stuck all Party positions in a liquidation state.
+# M-02. Expired signature can stuck all Party positions in a liquidation state.
 
 ## Summary
 Expired signature can stuck all Party positions in a liquidation state.
@@ -421,71 +419,7 @@ Manual Review
 ## Recommendation
 There should be a way to reset the liquidation timestamp of a Party on the user's side. Instead of the need to manually change the liquidation timeout for every expired signature there is.
 
-# 4. Loss of funds duo to wrong accounting of decimals when changing collateral.
-
-## Summary
-Changing the collateral leads to the wrong accounting of the existing balances duo to decimals difference between USDC and USDT.
-
-## Vulnerability Detail
-On the sherlock contest page, it is shown the symmetrical protocol can interact with both USDC and USDT tokens. Which has different decimals on the most chains: USDC - 18 decimals, USDT - 6 decimals.
-
-<img width="611" alt="Screenshot 2023-07-04 at 13 49 17" src="https://github.com/SilentYuki/Portfolio/assets/135425690/b99ab9db-2cd3-4116-a022-8d07b2545121">
-
-By looking at the protocol design, the amount which is added to the users balances is calculated in 18 decimals, so everything will work fine and the decimals of the tokens won't matter here.
-
-```solidity
-    function deposit(address user, uint256 amount) internal {
-        GlobalAppStorage.Layout storage appLayout = GlobalAppStorage.layout();
-        IERC20(appLayout.collateral).safeTransferFrom(msg.sender, address(this), amount);
-        uint256 amountWith18Decimals = (amount * 1e18) /
-        (10 ** IERC20Metadata(appLayout.collateral).decimals());
-        AccountStorage.layout().balances[user] += amountWith18Decimals;
-    }
-```
-```solidity
-    function withdraw(address user, uint256 amount) internal {
-        AccountStorage.Layout storage accountLayout = AccountStorage.layout();
-        GlobalAppStorage.Layout storage appLayout = GlobalAppStorage.layout();
-        require(
-            block.timestamp >=
-            accountLayout.withdrawCooldown[msg.sender] + MAStorage.layout().deallocateCooldown,
-            "AccountFacet: Cooldown hasn't reached"
-        );
-        uint256 amountWith18Decimals = (amount * 1e18) /
-        (10 ** IERC20Metadata(appLayout.collateral).decimals());
-        accountLayout.balances[msg.sender] -= amountWith18Decimals;
-        IERC20(appLayout.collateral).safeTransfer(user, amount);
-    }
-```
-The problem occurs when the protocol team wants to change the collateral between USDC or USDT.
-This will lead to the wrong accounting of the existing balances, as they will no longer be calculated based on the old decimals but the new ones.
-
-```solidity
-    function setCollateral(
-        address collateral
-    ) external onlyRole(LibAccessibility.DEFAULT_ADMIN_ROLE) {
-        GlobalAppStorage.layout().collateral = collateral;
-        emit SetCollateral(collateral);
-    }
-```
-
-## Impact
-Wrong accounting of the existing balances duo to decimal difference.
-
-## Code Snippet
-https://github.com/sherlock-audit/2023-06-symmetrical/blob/main/symmio-core/contracts/facets/Account/AccountFacetImpl.sol#L27
-
-https://github.com/sherlock-audit/2023-06-symmetrical/blob/main/symmio-core/contracts/facets/control/ControlFacet.sol#L95
-
-## Tool used
-
-Manual Review
-
-## Recommendation
-As how it is right now, the protocol design doesn't allow changing the collateral when there are existing balances.
-The code should be changed or the function setCollateral should be removed.
-
-# 5. Malicious Party A can prevent Party B from emergency closing a position on a market price.
+# M-03. Malicious Party A can prevent Party B from emergency closing a position on a market price.
 
 ## Summary
 Malicious Party A who doesn't want the position to be closed on a market price can temporary DoS Party B from closing the position in emergency mode.
@@ -596,7 +530,7 @@ The function emergencyClosePosition should be callable when the quote status is 
 }
 ```
 
-# 6. Malicious liquidator can get the liquidation fee without finalizing the full liquidation of Party A.
+# M-04. Malicious liquidator can get the liquidation fee without finalizing the full liquidation of Party A.
 
 ## Summary
 Malicious liquidator can get the liquidation fee without finalizing the full liquidation of Party A.
@@ -642,83 +576,3 @@ Manual Review
 
 ## Recommendation
 Given the issue describe above, it should be a better approach to give the liquidation fee at the msg.sender which liquidated all of the positions in the function liquidatePositionsPartyA. This way the liquidator will be more motivated to liquidate all of the positions and receive the whole liquidation reward than only doing half of the liquidation process.
-
-# 7. Force closing a position won't work when the order type is MARKET.
-
-## Summary
-Force closing a position won't work when the order type is MARKET.
-
-## Vulnerability Detail
-Duo to the require statement applied, force closing a position is only possible if the order type is LIMIT, which shouldn't be like this.
-
-```solidity
-    function forceClosePosition(uint256 quoteId, PairUpnlAndPriceSig memory upnlSig) internal {
-        AccountStorage.Layout storage accountLayout = AccountStorage.layout();
-        MAStorage.Layout storage maLayout = MAStorage.layout();
-        Quote storage quote = QuoteStorage.layout().quotes[quoteId];
-
-        uint256 filledAmount = quote.quantityToClose;
-        require(quote.quoteStatus == QuoteStatus.CLOSE_PENDING, "PartyAFacet: Invalid state");
-        require(
-            block.timestamp > quote.modifyTimestamp + maLayout.forceCloseCooldown,
-            "PartyAFacet: Cooldown not reached"
-        );
-        require(block.timestamp <= quote.deadline, "PartyBFacet: Quote is expired");
-        require(
-            quote.orderType == OrderType.LIMIT,
-            "PartyBFacet: Quote's order type should be LIMIT"
-        );
-        if (quote.positionType == PositionType.LONG) {
-            require(
-                upnlSig.price >=
-                    quote.requestedClosePrice +
-                        (quote.requestedClosePrice * maLayout.forceCloseGapRatio) /
-                        1e18,
-                "PartyAFacet: Requested close price not reached"
-            );
-        } else {
-            require(
-                upnlSig.price <=
-                    quote.requestedClosePrice -
-                        (quote.requestedClosePrice * maLayout.forceCloseGapRatio) /
-                        1e18,
-                "PartyAFacet: Requested close price not reached"
-            );
-        }
-
-        LibMuon.verifyPairUpnlAndPrice(upnlSig, quote.partyB, quote.partyA, quote.symbolId);
-        LibSolvency.isSolventAfterClosePosition(
-            quoteId,
-            filledAmount,
-            quote.requestedClosePrice,
-            upnlSig
-        );
-        accountLayout.partyANonces[quote.partyA] += 1;
-        accountLayout.partyBNonces[quote.partyB][quote.partyA] += 1;
-        LibQuote.closeQuote(quote, filledAmount, quote.requestedClosePrice);
-    }
-```
-The difference between LIMIT and MARKET orders when closing a position. Is that the MARKET order requires that the whole quantity of the Quote is being closed, while the LIMIT can be partially closed.
-
-```solidity
-        if (quote.orderType == OrderType.LIMIT) {
-            require(quote.quantityToClose >= filledAmount, "PartyBFacet: Invalid filledAmount");
-        } else {
-            require(quote.quantityToClose == filledAmount, "PartyBFacet: Invalid filledAmount");
-        }
-```
-Generally there shouldn't be restrictions regarding MARKET orders when force closing a position, which means that this is a bug in the protocol design.
-
-## Impact
-Force closing a position won't work when the order type is MARKET.
-
-## Code Snippet
-https://github.com/sherlock-audit/2023-06-symmetrical/blob/main/symmio-core/contracts/facets/PartyA/PartyAFacetImpl.sol#L253
-
-## Tool used
-
-Manual Review
-
-## Recommendation
-Consider removing the require statement, as both LIMIT and MARKET orders should be permitted to be force closed as a position.
-
