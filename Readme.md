@@ -10,18 +10,7 @@ My name is Yuki, and I am an independent blockchain security researcher.
 
 | Overall issues found | High risk | Unique highs | Medium risk | Unique mediums | Audited contests |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| 33 issues found | 19 highs | 1 | 14 mediums | - | 8 contests |
-
-# Yuki's monthly tracking 
-### 22 June, 2023 - 22 July, 2023 
-| Total issues | High risk | Medium risk | Audited contests | Security reports | Earned payouts |
-|:--:|:--:|:--:|:--:|:--:|:--:|
-| 21 issues found | 14 highs | 7 mediums | 5 contests | [Source](https://github.com/SilentYuki/Monthly-reports/tree/main/22%20June,%202023%20-%2022%20July,%202023) | $8,436.70 USDC |
-
-### 27 July, 2023 - 27 August, 2023 
-| Total issues | High risk | Medium risk | Audited contests | Security reports | Earned payouts |
-|:--:|:--:|:--:|:--:|:--:|:--:|
-| 12 issues found | 5 highs | 7 mediums | 3 contests | - | - | - |
+| 29 issues found | 16 highs | 1 | 13 mediums | - | 6 contests |
 
 # Sherlock  <img src="https://audits.sherlock.xyz/_next/static/media/sherlock_logo.dc2b3290.svg" width=22 height=22>
 
@@ -40,14 +29,12 @@ My name is Yuki, and I am an independent blockchain security researcher.
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | [Tangible](https://code4rena.com/contests/2023-08-tangible#top) | 2 highs | 6 mediums | Private | - | - | Solidity |
-| [veRWA](https://code4rena.com/contests/2023-08-verwa#top) | 2 highs | 0 medium | Private | - | - | Solidity |
 
 # CodeHawks <img src="https://res.cloudinary.com/droqoz7lg/image/upload/v1689080263/snhkgvtsidryjdtx0pce.png" width=50 height=27>
 
 ### Audit Competitions
 | Contest | High risk | Medium risk | Security report | Leaderboard | Payout | Language |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| [Escrow](https://www.codehawks.com/contests/cljyfxlc40003jq082s0wemya) | 1 high | 1 medium | [Source](https://github.com/SilentYuki/Portfolio/blob/main/Security%20Reports/codehawks/Escrow.md) | - | - | Solidity |
 
 # Immunefi <img src="https://immunefi.com/images/logo-white.svg" width=100 height=25>
 
