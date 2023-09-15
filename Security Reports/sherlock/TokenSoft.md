@@ -32,61 +32,11 @@ In the dynamic realm of digital assets, security, efficiency, and compliance tak
 
 | Severity | Title | Count |
 |:--|:--|:--:|
-| High | Slightly increasing the vote factor can result to beneficiaries not able to claim their tokens. | 1 |
-| High | User can initialize distribution record multiple times to extend his voting power. | 2 | 
-| High | Logic error occurs when executing a claim, if the beneficiary was adjusted before. | 3 |
-| High | Re-initializing the beneficiary if the total has been updated doesn't mint any additional voting power to the beneficiary. | 4 |
-| High | Wrong accounting of voting power minted to the beneficiary in most of the vesting contracts. | 5 |
+| High | User can initialize distribution record multiple times to extend his voting power. | H-01 | 
+| Medium | Slightly increasing the vote factor can result to beneficiaries not able to claim their tokens. | M-01 |
+| Medium | Logic error occurs when executing a claim, if the beneficiary was adjusted before. | M-02 |
 
-# 1. Slightly increasing the vote factor can result to beneficiaries not able to claim their tokens.
-
-## Summary
-Slightly increasing the vote factor can result to beneficiaries not able to claim their tokens.
-
-## Vulnerability Detail
-Increasing the vote factor can result to unexpected outcome, as beneficiaries won't be able to claim their tokens.
-
-When executing claim, the function calculates the amount of votes it has to burn based on the formula in the function 
-tokensToVotes. This can be problematic if the vote power increases and can lead to the following scenario:
-- A beneficiary is initialized and voting power is minted to it based on the current factor.
-- Time passes and the vote factor slightly increases
-- The beneficiary tries to claim his tokens but as the vote factor increased, the function will try to burn more voting power than the user has and it will revert.
-- In the end the beneficiary won't be able to claim his rewards.
-
-```solidity
-  function _executeClaim(
-    address beneficiary,
-    uint256 totalAmount
-  ) internal virtual override returns (uint256 _claimed) {
-    _claimed = super._executeClaim(beneficiary, totalAmount);
-
-    // reduce voting power through ERC20Votes extension
-    _burn(beneficiary, tokensToVotes(_claimed));
-  }
-``` 
-```solidity
-  function tokensToVotes(uint256 tokenAmount) private view returns (uint256) {
-    return (tokenAmount * voteFactor) / fractionDenominator;
-  }
-```
-
-## Impact
-Duo to difference between the two vote factors, when the beneficiary was initialized and after the vote factor increases. The beneficiary won't be able to claim his tokens, as the function will try to burn more voting power than the beneficiary has. 
-
-## Code Snippet
-
-https://github.com/SoftDAO/contracts/blob/291df55ddb0dbf53c6ed4d5b7432db0c357ca4d3/contracts/claim/abstract/AdvancedDistributor.sol#L87
-
-https://github.com/SoftDAO/contracts/blob/291df55ddb0dbf53c6ed4d5b7432db0c357ca4d3/contracts/claim/abstract/AdvancedDistributor.sol#L73
-
-## Tool used
-
-Manual Review
-
-## Recommendation
-The one way to fix this issue would be to burn the whole amount of voting power the beneficiary has, only if the tokens claimed have more voting power than the user has. This will prevent the issue from not being able to claim rewards, if vote factor increases over time.
-
-# 2. User can initialize distribution record multiple times to extend his voting power.
+# H-01. User can initialize distribution record multiple times to extend his voting power.
 ## Summary
 User can initialize distribution record multiple times to extend his voting power.
 
@@ -161,7 +111,55 @@ Recommend to not allow a beneficiary to be initialized multiple times with the s
   }
 ```
 
-# 3. Logic error occurs when executing a claim, if the beneficiary was adjusted before.
+# M-01. Slightly increasing the vote factor can result to beneficiaries not able to claim their tokens.
+
+## Summary
+Slightly increasing the vote factor can result to beneficiaries not able to claim their tokens.
+
+## Vulnerability Detail
+Increasing the vote factor can result to unexpected outcome, as beneficiaries won't be able to claim their tokens.
+
+When executing claim, the function calculates the amount of votes it has to burn based on the formula in the function 
+tokensToVotes. This can be problematic if the vote power increases and can lead to the following scenario:
+- A beneficiary is initialized and voting power is minted to it based on the current factor.
+- Time passes and the vote factor slightly increases
+- The beneficiary tries to claim his tokens but as the vote factor increased, the function will try to burn more voting power than the user has and it will revert.
+- In the end the beneficiary won't be able to claim his rewards.
+
+```solidity
+  function _executeClaim(
+    address beneficiary,
+    uint256 totalAmount
+  ) internal virtual override returns (uint256 _claimed) {
+    _claimed = super._executeClaim(beneficiary, totalAmount);
+
+    // reduce voting power through ERC20Votes extension
+    _burn(beneficiary, tokensToVotes(_claimed));
+  }
+``` 
+```solidity
+  function tokensToVotes(uint256 tokenAmount) private view returns (uint256) {
+    return (tokenAmount * voteFactor) / fractionDenominator;
+  }
+```
+
+## Impact
+Duo to difference between the two vote factors, when the beneficiary was initialized and after the vote factor increases. The beneficiary won't be able to claim his tokens, as the function will try to burn more voting power than the beneficiary has. 
+
+## Code Snippet
+
+https://github.com/SoftDAO/contracts/blob/291df55ddb0dbf53c6ed4d5b7432db0c357ca4d3/contracts/claim/abstract/AdvancedDistributor.sol#L87
+
+https://github.com/SoftDAO/contracts/blob/291df55ddb0dbf53c6ed4d5b7432db0c357ca4d3/contracts/claim/abstract/AdvancedDistributor.sol#L73
+
+## Tool used
+
+Manual Review
+
+## Recommendation
+The one way to fix this issue would be to burn the whole amount of voting power the beneficiary has, only if the tokens claimed have more voting power than the user has. This will prevent the issue from not being able to claim rewards, if vote factor increases over time.
+
+# M-02. Logic error occurs when executing a claim, if the beneficiary was adjusted before.
 ## Summary
 Logic error occurs when executing a claim, if the beneficiary was adjusted before.
 
@@ -338,136 +336,5 @@ Then the adjusted value should be applied before re-initializing
     claimed += claimableAmount;
 
     return claimableAmount;
-  }
-```
-
-# 4. Re-initializing the beneficiary if the total has been updated doesn't mint any additional voting power to the beneficiary.
-## Summary
-Re-initializing the beneficiary if the total has been updated doesn't mint any additional voting power to the beneficiary.
-
-## Vulnerability Detail
-When executing a claim, the function re-initialize the beneficiary if the total has been updated, since the last time the beneficiary was initialized.
-- The problem here is that the function initializes the benificary, but doesn't actually mint any additional voting power to it.
-
-```solidity
-  function _executeClaim(
-    address beneficiary,
-    uint256 _totalAmount
-  ) internal virtual returns (uint256) {
-    uint120 totalAmount = uint120(_totalAmount);
-
-    // effects
-    if (records[beneficiary].total != totalAmount) {
-      // re-initialize if the total has been updated
-      _initializeDistributionRecord(beneficiary, totalAmount);
-    }
-    
-    uint120 claimableAmount = uint120(getClaimableAmount(beneficiary));
-    require(claimableAmount > 0, 'Distributor: no more tokens claimable right now');
-
-    records[beneficiary].claimed += claimableAmount;
-    claimed += claimableAmount;
-
-    return claimableAmount;
-  }
-```
-```solidity
-  function _initializeDistributionRecord(
-    address beneficiary,
-    uint256 _totalAmount
-  ) internal virtual {
-    uint120 totalAmount = uint120(_totalAmount);
-
-    // Checks
-    require(totalAmount <= type(uint120).max, 'Distributor: totalAmount > type(uint120).max');
-
-    // Effects - note that the existing claimed quantity is re-used during re-initialization
-    records[beneficiary] = DistributionRecord(true, totalAmount, records[beneficiary].claimed);
-    emit InitializeDistributionRecord(beneficiary, totalAmount);
-  }
-```
-For example, take the PriceTierVestingSale_2_0 contract.
-- The total depends on the purchased amount by the beneficiary.
-- If the beneficiary purchase more tokens, his purchased amount increases.
-- The beneficiary calls the claim function.
-- The claim function will re-initalize his beneficiary to the current purchased amount but won't mint the additional voting power earned by the beneficiary depending on how much more tokens the beneficiary purchased.
-
-## Impact
-Loss of voting power duo to the contract initializing the beneficiary without minting any additional voting power to it.
-
-## Code Snippet
-
-https://github.com/SoftDAO/contracts/blob/291df55ddb0dbf53c6ed4d5b7432db0c357ca4d3/contracts/claim/abstract/Distributor.sol#L66
-
-https://github.com/SoftDAO/contracts/blob/291df55ddb0dbf53c6ed4d5b7432db0c357ca4d3/contracts/claim/abstract/Distributor.sol#L47
-
-## Tool used
-
-Manual Review
-
-## Recommendation
-Hard to do a fix here as a lot of vesting contracts depend on the Distributor contract, and few of them have different logic. 
-
-- E.g. the BasicDistributor contract doesn't have this issue, as the total is adjusted by the owner.
-
-# 5. Wrong accounting of voting power minted to the beneficiary in most of the vesting contracts. 
-## Summary
-Wrong accounting of voting power minted to the beneficiary in most of the vesting contracts. 
-
-## Vulnerability Detail
-The function initializeDistributionRecord is open for users to initialize their distribution record to the current purchased amount. 
-
-However this leads to the wrong accounting of the voting power, e.g take the following scenario:
-1. User has 20 purchased tokens and calls the function to initialize his distribution record. As a result the function mints voting power corresponding the 20 tokens he purchased.
-3. After some time the user purchases another 20 tokens, as a result the user has 40 purchased tokens now. 
-4. The user calls the function to initialize his distribution record, but instead of only minting voting power for the additional 20 tokens he bought. It mints voting power corresponding the 40 tokens.
-5. In the end duo to this problem, the user has voting power for 60 tokens, instead of the 40 tokens he purchased.
-
-```solidity
-  function initializeDistributionRecord(
-    address beneficiary // the address that will receive tokens
-  ) external validSaleParticipant(beneficiary) {
-    _initializeDistributionRecord(beneficiary, getPurchasedAmount(beneficiary));
-  }
-```
-```solidity
-  function _initializeDistributionRecord(
-    address beneficiary,
-    uint256 totalAmount
-  ) internal virtual override {
-    super._initializeDistributionRecord(beneficiary, totalAmount);
-
-    // add voting power through ERC20Votes extension
-    _mint(beneficiary, tokensToVotes(totalAmount));
-  }
-```
-
-## Impact
-Wrong accounting of voting power when initializing a beneficiary, can lead to the user receiving more voting power than the amount he purchased in the first place.
-
-## Code Snippet
-
-https://github.com/SoftDAO/contracts/blob/291df55ddb0dbf53c6ed4d5b7432db0c357ca4d3/contracts/claim/PriceTierVestingSale_2_0.sol#L91
-
-## Tool used
-
-Manual Review
-
-## Recommendation
-Track the purchased amount with mapping and mint voting power only for the additional tokens the user purchased.
-
-```solidity
-  function _initializeDistributionRecord(
-    address beneficiary,
-    uint256 totalAmount
-  ) internal virtual override {
-    super._initializeDistributionRecord(beneficiary, totalAmount);
-
-+   uint256 purchasedAmount = lastPurchasedAmount[beneficiary];
-
-    // add voting power through ERC20Votes extension
-    _mint(beneficiary, tokensToVotes(purchasedAmount));
-
-+   lastPurchasedAmount[beneficiary] = totalAmount;
   }
 ```
