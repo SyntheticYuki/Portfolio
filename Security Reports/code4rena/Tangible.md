@@ -28,6 +28,6 @@
 
 
 
-## Issues will be shown when the contest report is public
+## Issues will be shown when the contest report is made public
 
 
