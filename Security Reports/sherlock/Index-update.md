@@ -27,9 +27,9 @@ The following Index Coop products have been deployed on Index Protocol:
 
 | Severity | Title | Count |
 |:--|:--|:--:|
-| High | SetToken can't be unlocked early. | 1 |
+| Medium | SetToken can't be unlocked early. | M-01 |
 
-# 1. SetToken can't be unlocked early.
+# M-01. SetToken can't be unlocked early.
 ## Summary
 SetToken can't be unlocked early
 
